@@ -60,19 +60,18 @@ A continuación, se presentan formas generales de ejecutar código para cada len
 
 ### Java
 
-*   **Ejecución:**
-    1.  Abre una terminal o línea de comandos.
-    2.  Navega al directorio que contiene tu archivo `.java`. En este caso, sería la carpeta `Java/`:
-        ```bash
-        cd Java/
-        ```
-    3.  Compila el archivo Java. Por ejemplo, para `AutomataJava.java`:
-        ```bash
-        javac AutomataJava.java
-        ```
-        Esto generará un archivo `AutomataJava.class` en el mismo directorio (`Java/`), si la compilación es exitosa.
+*   **Compilación y Ejecución (ejemplo para `AutomataJava.java` en el paquete `Java`):**
 
-    4.  Una vez compilado, ejecuta la clase (asegúrate de que la clase `AutomataJava` contenga un método `public static void main(String[] args)`):
+    1.  Abre una terminal o línea de comandos.
+    2.  **Compila los archivos Java:**
+        Para compilar todos los archivos `.java` dentro de la carpeta `Java`:
         ```bash
-        java AutomataJava
+        javac Java/*.java
+        ```
+        Esto generará los archivos `.class` correspondientes dentro de la carpeta `Java/`.
+
+    3.  **Ejecuta la clase principal:**
+        Desde el mismo directorio donde ejecutaste `javac` (es decir, desde `TuProyecto/`), ejecuta la clase usando su nombre completamente calificado:
+        ```bash
+        java Java.AutomataJava
         ```
