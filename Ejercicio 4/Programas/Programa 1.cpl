@@ -1,0 +1,23 @@
+function sugerencia(){
+    // Declaracion de las variables que se van a usar
+    product prodElegido = obtain->product
+    boolean exito = false
+
+    //Recorrido de los productos en la base de datos en busca de productos del mismo tipo y con un precio menor
+    foreach(product producto : storage){
+        if((producto->type == prodElegido->type) && (producto->price < prodElegido->price)){
+            //Si el usuario decide no seguir buscando un producto mas economico, el bucle finaliza
+            if(!show.pick("El producto " producto->name " es una opcion mas economica que " prodElegido->name " desea ver si hay una opcion aun mas economica?", 
+            "Si",
+            "No")){
+                exito = true
+                break
+            }
+        }
+    }
+
+    //Mensaje que se muestra en caso de no encontrar una opcion mas economica
+    if(!exito){
+        show.alert("No fue posible conseguir una opcion mas economica")
+    }
+}

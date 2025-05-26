@@ -1,0 +1,50 @@
+function simulacion(){
+    number presupuesto = obtain->number
+    number precioTotal = 0
+    cart carrito
+
+    while(true){
+        product producto = obtain.product
+        number cantidad = obtain.number
+
+        if(cantidad <= producto->stock){
+            if(show.pick("Usted agarro " cantidad producto->name " desea cambiar la cantidad agarrada?", "Si", "No")){
+                cantidad = cambioCantidad(producto)
+            }
+
+            number precio = cantidad * producto->price
+
+            if((precioTotal + precio) < presupuesto){
+                producto->stock = cantidad
+                precioTotal += precio
+                carrito.add(producto)
+
+            }else{
+                show.popup("Al elegir este producto y esta cantidad se pasara del presupuesto, por lo que no se agrego al carrito")
+            }
+
+        }else{
+            show.popup("No es posible agarrar esa cantidad de producto.")
+        }
+
+        if(!show.pick("Desea agregar mas productos al carrito?", "Si", "No")){
+            break;
+        }
+    }
+
+    show.alert("Estos son los productos que se encuentran en su carrito de compras")
+    carrito.goall()
+
+}
+
+backfunction cambioCantidad(product producto){
+    while(true){
+        number cantidad = obtain.number
+
+        if(cantidad <= producto->stock){
+            return cantidad
+        }
+
+        show.popup("No es posible agarrar esa cantidad de producto.")
+    }
+}

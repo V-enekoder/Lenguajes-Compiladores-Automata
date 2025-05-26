@@ -1,0 +1,25 @@
+{
+  "name": "capsule",
+  "displayName": "capsule",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "capsule",
+      "aliases": ["capsule", "capsule"],
+      "extensions": [".cpl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "capsule",
+      "scopeName": "source.capsule",
+      "path": "./syntaxes/capsule.tmLanguage.json"
+    }]
+  }
+}

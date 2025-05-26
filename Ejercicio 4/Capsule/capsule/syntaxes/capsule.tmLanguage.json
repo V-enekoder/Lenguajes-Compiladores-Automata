@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "capsule",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "keyword.control.capsule",
+			"match": "\\b(backfunction|function|show|alert|popup|pick|obtain|storage|paycart|reserve|break)\\b"
+		},
+		{
+			"name": "storage.function.capsule",
+			"match": "\\.(find|diminish)"
+		},
+		{
+			"name": "support.function.cart.capsule",
+			"match": "\\.(add|remove|goto|goall|delete)"
+		},
+		{
+			"name": "constant.language.boolean.capsule",
+			"match": "\\b(true|false)\\b"
+		},
+		{
+			"name": "variable.type.capsule",
+			"match": "\\b(number|word|text|longtext|boolean|product|cart)\\b"
+		},
+		{
+			"name": "variable.property.product.capsule",
+  			"match": "\\->(id|name|description|type|price|stock)\\b"
+		},
+		{
+			"name": "comment.line.double-slash.capsule",
+			"begin": "//",
+			"beginCaptures": {
+				"0": { "name": "punctuation.definition.comment.capsule" }
+			},
+			"end": "$"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.capsule",
+				"match": "\\b(if|else|while|foreach|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.capsule",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.capsule",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.capsule"
+}

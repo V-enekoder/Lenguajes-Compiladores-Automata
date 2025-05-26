@@ -37,55 +37,55 @@
     {
         "label": "Nodo",
         "kind": 6,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "class Nodo:\n    def __init__(self, partida_val, k):\n        self.partida = partida_val\n        self.cuerpo = [random.randint(1, 100000) for _ in range(k)]\n        self.firma_digital = self._calcular_firma_digital()\n        self.siguiente = None\n    def _calcular_firma_digital(self):\n        \"\"\"\n        Calcula el SHA256 de (partida concatenado con los elementos del cuerpo separados por un espacio).\n        \"\"\"",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     },
     {
         "label": "AutomataListaEnlazada",
         "kind": 6,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "class AutomataListaEnlazada:\n    def __init__(self):\n        self.cabeza = None\n        self.cola = None # Para inserción eficiente al final\n        self.cantidad_nodos = 0\n    def construir_lista(self, n, k):\n        \"\"\"\n        Construye la lista enlazada con n nodos y k elementos en el cuerpo de cada nodo.\n        \"\"\"\n        if n <= 0:",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     },
     {
         "label": "ejecutar_escenario",
         "kind": 2,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "def ejecutar_escenario(n_val, k_val, cantidad_de_ejecuciones=100, mostrar_detalle=False):\n    if cantidad_de_ejecuciones <= 0:\n        raise ValueError(\"La cantidad de ejecuciones debe ser un entero positivo.\")\n    tiempo_total_segundos = 0\n    # Guardaremos el autómata de la última ejecución por si se necesita mostrar detalle\n    automata_de_la_ultima_ejecucion = None\n    for i in range(cantidad_de_ejecuciones):\n        start_time = time.perf_counter() # Usar perf_counter para mayor precisión\n        # Es importante crear una nueva instancia del autómata en cada iteración\n        # si el objetivo es medir la construcción desde cero cada vez.",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     },
     {
         "label": "calentamient0",
         "kind": 2,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "def calentamient0():\n    escenarios = [\n    {\"n\": 3, \"k\": 4, \"mostrar\": False},    # a)\n    {\"n\": 10, \"k\": 200, \"mostrar\": False},  # b)\n    {\"n\": 200, \"k\": 10, \"mostrar\": False},  # c)\n]\n    for i, esc in enumerate(escenarios):\n        tiempo_ms = ejecutar_escenario(esc[\"n\"], esc[\"k\"], mostrar_detalle=esc.get(\"mostrar\", False))\n# --- Escenarios de Prueba ---\nescenarios = [",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     },
     {
         "label": "escenarios",
         "kind": 5,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "escenarios = [\n    {\"n\": 3, \"k\": 4, \"mostrar\": False},    # a)\n    {\"n\": 10, \"k\": 200, \"mostrar\": False},  # b)\n    {\"n\": 200, \"k\": 10, \"mostrar\": False},  # c)\n]\ncalentamient0() \nprint(\"=== FIN DE CALENTAMIENTO ===\")\nresultados_python = []\nprint(\"=== INICIO DE PRUEBAS PYTHON ===\")\nfor i, esc in enumerate(escenarios):",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     },
     {
         "label": "resultados_python",
         "kind": 5,
-        "importPath": "Python.automata",
-        "description": "Python.automata",
+        "importPath": "Ejercicio 2.Python.automata",
+        "description": "Ejercicio 2.Python.automata",
         "peekOfCode": "resultados_python = []\nprint(\"=== INICIO DE PRUEBAS PYTHON ===\")\nfor i, esc in enumerate(escenarios):\n    tiempo_ms = ejecutar_escenario(esc[\"n\"], esc[\"k\"], mostrar_detalle=esc.get(\"mostrar\", False))\n    resultados_python.append({\n        \"escenario_id\": chr(ord('a') + i) if i < 3 else f\"extra{i-2}\", # a, b, c, extra1, extra2\n        \"n\": esc[\"n\"],\n        \"k\": esc[\"k\"],\n        \"tiempo_ms\": tiempo_ms\n    })",
-        "detail": "Python.automata",
+        "detail": "Ejercicio 2.Python.automata",
         "documentation": {}
     }
 ]
