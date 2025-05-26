@@ -40,7 +40,7 @@ A continuación, se presentan formas generales de ejecutar código para cada len
 
 1.  Navega al directorio del script o proyecto Python:
     ```bash
-    cd Python
+    cd Ejercicio 2/Python
     ```
 2.  Ejecuta el script:
     ```bash
@@ -51,7 +51,7 @@ A continuación, se presentan formas generales de ejecutar código para cada len
 
 1.  Navega al directorio del proyecto Go:
     ```bash
-    cd Go
+    cd Ejercicio 2/Go
     ```
 2.  Asegúrate de haber ejecutado `go mod tidy` para instalar dependencias.
 3.  Para ejecutar con
@@ -63,14 +63,18 @@ A continuación, se presentan formas generales de ejecutar código para cada len
 *   **Compilación y Ejecución (ejemplo para `AutomataJava.java` en el paquete `Java`):**
 
     1.  Abre una terminal o línea de comandos.
-    2.  **Compila los archivos Java:**
+    2.  Navega al directorio del proyecto Go:
+    ```bash
+    cd Ejercicio 2/Java
+    ```
+    3.  **Compila los archivos Java:**
         Para compilar todos los archivos `.java` dentro de la carpeta `Java`:
         ```bash
         javac Java/*.java
         ```
         Esto generará los archivos `.class` correspondientes dentro de la carpeta `Java/`.
 
-    3.  **Ejecuta la clase principal:**
+    4.  **Ejecuta la clase principal:**
         Desde el mismo directorio donde ejecutaste `javac` (es decir, desde `TuProyecto/`), ejecuta la clase usando su nombre completamente calificado:
         ```bash
         java Java.AutomataJava
