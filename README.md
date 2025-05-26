@@ -55,6 +55,7 @@ A continuación, se presentan formas generales de ejecutar código para cada len
     ```
 2.  Asegúrate de haber ejecutado `go mod tidy` para instalar dependencias.
 3.  Para ejecutar con
+   ```bash
     go run automata.go  
     ```
 
